@@ -1,3 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+#define MOD 1000000007LL
+
+int bandingkan(const void *x, const void *y) {
+    long long a = *(const long long *)x;
+    long long b = *(const long long *)y;
+
+    if (a < b)
+        return -1;
+    if (a > b)
+        return 1;
+
+    return 0;
+}
+
 int main() {
     int n;
     scanf("%d", &n);
