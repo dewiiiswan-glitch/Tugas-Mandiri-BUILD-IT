@@ -1,25 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <math.h>
 
-#define MOD 1000000007LL
+#define MOD 1000000007
 
-int bandingkan(const void *x, const void *y) {
-    long long a = *(const long long *)x;
-    long long b = *(const long long *)y;
-
-    if (a < b)
-        return -1;
-    if (a > b)
-        return 1;
-
+int bandingkan(const void *a, const void *b) {
+    long long x = *(const long long *)a;
+    long long y = *(const long long *)b;
+    if (x < y) return -1;
+    if (x > y) return 1;
     return 0;
 }
 
 int main() {
     int n;
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1) return 0;
 
     long long *a = malloc(n * sizeof(long long));
 
