@@ -1,6 +1,7 @@
 int main() {
     int n;
     scanf("%d", &n);
+
     long long *a = malloc(n * sizeof(long long));
 
     for (int i = 0; i < n; i++) {
